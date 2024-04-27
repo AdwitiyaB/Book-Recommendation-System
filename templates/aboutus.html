@@ -3,18 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us Page Design</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Book Recommendation System</title>
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+          referrerpolicy="no-referrer" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: sans-serif;
+            font-family: 'Poppins';
         }
 
 
@@ -109,7 +115,6 @@
         .home-para {
             margin-bottom: 20px;
         }
-
 
 
         @keyframes width {
@@ -215,148 +220,149 @@
         }
 
 
+        footer {
+            margin-top: 30px;
+            width: 100%;
+            background: #eaeaea;
+        }
 
-footer{
-margin-top:30px;
-    width: 100%;
-    background: #eaeaea;
-}
+        footer .footer_main {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
 
-footer .footer_main{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-}
+        footer .footer_main .tag {
+            margin: 10px 0;
 
-footer .footer_main .tag{
-    margin: 10px 0;
+        }
 
-}
+        footer .footer_main .tag img {
+            width: 120px;
+            height: 100px;
+            margin-bottom: 10px;
+            margin-top: 45px;
+        }
 
-footer .footer_main .tag img{
-    width: 120px;
-    height:100px;
-    margin-bottom: 10px;
-    margin-top:45px;
-}
+        footer .footer_main .tag p {
+            width: 250px;
+            line-height: 22px;
+            text-align: justify;
+        }
 
-footer .footer_main .tag p{
-    width: 250px;
-    line-height: 22px;
-    text-align: justify;
-}
+        footer .footer_main .tag h1 {
+            font-size: 25px;
+            margin: 25px 0;
+            color: #000;
+        }
 
-footer .footer_main .tag h1{
-    font-size: 25px;
-    margin: 25px 0;
-    color: #000;
-}
+        footer .footer_main .tag a {
+            display: block;
+            color: black;
+            text-decoration: none;
+            margin: 10px 0;
+        }
 
-footer .footer_main .tag a{
-    display: block;
-    color: black;
-    text-decoration: none;
-    margin: 10px 0;
-}
+        footer .footer_main .tag i {
+            margin-right: 10px;
+        }
 
-footer .footer_main .tag i{
-    margin-right: 10px;
-}
+        footer .footer_main .tag .social_link i {
+            margin: 0 5px;
+        }
 
-footer .footer_main .tag .social_link i{
-    margin: 0 5px;
-}
+        footer .end {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            color: #000;
+        }
 
-footer .end{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px;
-    color: #000;
-}
-
-footer .end span{
-    /* color: #089da1; */
-    color: #03ac13;
-    margin-left: 10px;
-}
+        footer .end span {
+            /* color: #089da1; */
+            color: #03ac13;
+            margin-left: 10px;
+        }
 
     </style>
 </head>
 
 <body>
-    <!--================== Header Section Starts from Here ==================-->
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="/">
-                    <img src="https://www.nicepng.com/png/detail/23-232432_book-icon-transparent-blue-book-icon.png">
-                </a>
-            </div>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/recommend">Recommend</a></li>
-                <li><a href="/aboutus">About-us</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!--================== Header Section Ends Here -->
-
-
-    <!--================== Home Section Starts from Here ==================-->
-    <section id="home">
-        <div class="home-left">
-            <img src="https://classroomclipart.com/image/static7/preview2/one-open-book-with-plant-design-elements-55799.jpg" alt="" style="padding-top: 60px;">
+<header>
+    <nav>
+        <div class="logo">
+            <a href="/">
+                <img src="https://www.nicepng.com/png/detail/23-232432_book-icon-transparent-blue-book-icon.png">
+            </a>
         </div>
-        <div class="home-right">
-            <h2 class="home-heading"> Discover your next read</h2>
-            <p class="home-para">To create a successful book recommendation system, it is also important to understand user behavior and preferences. This can be achieved through user surveys, data analysis, and other techniques that gather information about readers' interests, reading habits, and preferred genres.
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/recommend">Recommend</a></li>
+            <li><a href="/aboutus">About-us</a></li>
+        </ul>
+    </nav>
+</header>
 
-                Finally, a good book recommendation system should also take into account factors such as book popularity, author reputation, and reader reviews. By considering these factors, the system can provide more nuanced and personalized recommendations that are tailored to each individual user.</p>
 
+<section id="home">
+    <div class="home-left">
+        <img alt=""
+             src="https://classroomclipart.com/image/static7/preview2/one-open-book-with-plant-design-elements-55799.jpg"
+             style="padding-top: 60px;">
+    </div>
+    <div class="home-right">
+        <h2 class="home-heading"> Discover your next read</h2>
+        <p class="home-para">To create a successful book recommendation system, it is also important to understand user
+            behavior and preferences. This can be achieved through user surveys, data analysis, and other techniques
+            that gather information about readers' interests, reading habits, and preferred genres.
+
+            Finally, a good book recommendation system should also take into account factors such as book popularity,
+            author reputation, and reader reviews. By considering these factors, the system can provide more nuanced and
+            personalized recommendations that are tailored to each individual user.</p>
+
+    </div>
+</section>
+
+<section id="workFlow">
+    <h2 class="heading"> Grow Up Your Workflow Speed. </h2>
+    <p class="para">Discover your next favorite book. Powered by cutting-edge technology and a passion for literature,
+        <br>we provide personalized recommendations tailored to your unique tastes. Join us on a journey of literary
+        exploration <br>and find the perfect reads that speak to you</p>
+
+</section>
+
+<section id="our-Team">
+    <h2>Our Team</h2>
+    <div class="teamContainer">
+        <div class="team-item">
+            <img alt="" src="https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/3_avatar-512.png">
+            <h5 class="member-name">Akash Nair</h5>
         </div>
-    </section>
-    <!--================== Home Section Ends Here -->
-
-    <!--================== Workflow Section Starts from Here ==================-->
-    <section id="workFlow">
-        <h2 class="heading"> Grow Up Your Workflow Speed. </h2>
-        <p class="para">Discover your next favorite book. Powered by cutting-edge technology and a passion for literature, <br>we provide personalized recommendations tailored to your unique tastes. Join us on a journey of literary exploration <br>and find the perfect reads that speak to you</p>
-
-    </section>
-    <!--================== Workflow Section Ends Here -->
-
-    <!--================== Our Team Section Starts from Here ==================-->
-    <section id="our-Team">
-        <h2>Our Team</h2>
-        <div class="teamContainer">
-            <div class="team-item">
-                <img src="https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/3_avatar-512.png" alt="">
-                <h5 class="member-name">Akash Nair</h5>
-            </div>
-            <div class="team-item">
-                <img src="https://cdn0.iconfinder.com/data/icons/kids-avatars/512/50_Kids_Icons-22-512.png" alt="">
-                <h5 class="member-name">Adwitiya Bhattacharya</h5>
-            </div>
-            <div class="team-item">
-                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRgyWmFPWT9tpH-Q0hOH6ygbTip-re9Y_-tmjQlAKMzFgKI3TJn" alt="">
-                <h5 class="member-name">Aditya Ranjan Pradhan</h5>
-            </div>
+        <div class="team-item">
+            <img alt="" src="https://cdn0.iconfinder.com/data/icons/kids-avatars/512/50_Kids_Icons-22-512.png">
+            <h5 class="member-name">Adwitiya Bhattacharya</h5>
         </div>
-
-    <!--================== Footer Starts from Here ==================-->
+        <div class="team-item">
+            <img alt=""
+                 src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRgyWmFPWT9tpH-Q0hOH6ygbTip-re9Y_-tmjQlAKMzFgKI3TJn">
+            <h5 class="member-name">Aditya Ranjan Pradhan</h5>
+        </div>
+    </div>
+</section>
 <footer>
     <div class="footer_main">
 
         <div class="logo">
-            <img style="height: 100px; width: 200px; margin-top: 10px" src="https://www.nicepng.com/png/detail/23-232432_book-icon-transparent-blue-book-icon.png">
+            <img src="https://www.nicepng.com/png/detail/23-232432_book-icon-transparent-blue-book-icon.png"
+                 style="height: 100px; width: 200px; margin-top: 10px">
         </div>
 
         <div class="tag">
             <h1>Quick Link</h1>
-            <a href="#">Home</a>
-            <a href="#">Recommended</a>
-            <a href="#">About</a>
+            <a href="/">Home</a>
+            <a href="/recommend">Recommended</a>
+            <a href="/aboutus">About-Us</a>
         </div>
 
         <div class="tag">
@@ -367,22 +373,10 @@ footer .end span{
 
         </div>
 
-        <div class="tag">
-            <h1>Follow Us</h1>
-            <div class="social_link">
-                <p>Instagram</p>
-                <p>Facebook</p>
-                <p>Linkedin</p>
-            </div>
-
-        </div>
-
     </div>
 
     <p class="end">Designed By<span><i class="fa-solid fa-face-grin"></i> Adwitiya, Akash, Aditiya </span></p>
 
 </footer>
-
-    <!--================== Footer Ends Here -->
-
+</body>
 </html>

@@ -6,9 +6,9 @@ import numpy as np
 popular_df = pandas.read_pickle('popular.pkl')
 
 pt = pandas.read_pickle('pt.pkl')
-print(pt)
+# print(pt)
 books = pandas.read_pickle('books.pkl')
-print(popular_df)
+# print(popular_df)
 similarity_scores = pandas.read_pickle('similarity_scores.pkl')
 app = Flask(__name__)
 

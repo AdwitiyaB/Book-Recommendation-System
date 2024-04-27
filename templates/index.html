@@ -2,21 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Recommender System</title>
-    <!-- Latest compiled and minified CSS -->
-    <!-- Add Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Book Recommendation System</title>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 
-<!-- Add Swiper CSS -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"  crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          referrerpolicy="no-referrer" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
+
+
+        html {
+            scroll-behavior: smooth;
+        }
 
         * {
             margin: 0;
@@ -293,7 +296,7 @@
                 we provide 50 best books with best review and once user search that book we also recommend them which
                 type of book they must read.
             </p>
-            <a href="/recommend" class="main_btn">Search</a>
+            <a class="main_btn" href="/recommend">Search</a>
 
         </div>
 
@@ -303,7 +306,8 @@
 
     </div>
 
-    <div style="margin-top: 250px; color: #03ac13" class="text-center main_tag main"><h1>Swipe Through Treasures Filled With Book!</h1></div>
+    <div class="text-center main_tag main" style="margin-top: 250px; color: #03ac13"><h1>Swipe Through Treasures Filled
+        With Book!</h1></div>
 </section>
 
 <div class="container">
@@ -328,7 +332,6 @@
     </div>
 </div>
 
-<!-- Initialize Swiper -->
 <script>
     var swiper = new Swiper('.swiper-container', {
         slidesPerView: 4,
@@ -340,9 +343,6 @@
         loop: false,
     });
 </script>
-
-
-<!--Services-->
 
 <div class="services">
 
@@ -388,14 +388,15 @@
     <div class="footer_main">
 
         <div class="logo">
-            <img style="height: 100px; width: 200px; margin-top: 10px" src="https://www.nicepng.com/png/detail/23-232432_book-icon-transparent-blue-book-icon.png">
+            <img src="https://www.nicepng.com/png/detail/23-232432_book-icon-transparent-blue-book-icon.png"
+                 style="height: 100px; width: 200px; margin-top: 10px">
         </div>
 
         <div class="tag">
             <h1>Quick Link</h1>
-            <a href="#">Home</a>
-            <a href="#">Recommended</a>
-            <a href="#">About</a>
+            <a href="/">Home</a>
+            <a href="/recommend">Recommended</a>
+            <a href="/aboutus">About-Us</a>
         </div>
 
         <div class="tag">
@@ -403,16 +404,6 @@
             <a href="mailto:20051124@kiit.ac.in"><i class="fa-solid fa-envelope"></i>Adwitiya Bhattacharya</a>
             <a href="mailto:20051314@kiit.ac.in"><i class="fa-solid fa-envelope"></i>Akash Nair</a>
             <a href="mailto:20051620@kiit.ac.in"><i class="fa-solid fa-envelope"></i>Aditya Ranjan Pradhan</a>
-
-        </div>
-
-        <div class="tag">
-            <h1>Follow Us</h1>
-            <div class="social_link">
-                <p>Instagram</p>
-                <p>Facebook</p>
-                <p>Linkedin</p>
-            </div>
 
         </div>
 
