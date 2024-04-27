@@ -23,7 +23,6 @@ def index():
                            rating=popular_df['avg_rating'].to_list()
                            )
 
-
 @app.route('/recommend')
 def recommend_ui():
     return render_template('recommend.html')
@@ -85,16 +84,5 @@ def autocomplete():
 def aboutus_ui():
     return render_template('aboutus.html')
 
-
-@app.route('/contactus')
-def contactus_ui():
-    return render_template('contactus.html')
-
-
-@app.route('/login')
-def login_ui():
-    return render_template('login.html')
-
-
 if __name__ == '__main__':
-    app.run(port=5001)
+    app.run(debug=True, port=5001)

@@ -1,102 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<style>
-  *{
-    margin: 0;
-    padding: 0;
-    font-family: "Open Sans",sans-serif;
-    box-sizing: border-box;
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us Page Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+
+        nav {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            box-shadow: 0 0 10px #03ac13;
+            background: #fff;
+            position: fixed;
+            top: 0; /* Position the navigation bar at the top */
+            z-index: 100;
+        }
+
+        nav .logo img {
+            width: 100px;
+            cursor: pointer;
+            margin: 8px 0;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav li {
+            display: inline-block;
+            padding: 0 10px;
+        }
+
+        nav li a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        nav li a:hover {
+            color: #03ac13;
+        }
+
+        nav .social_icon i {
+            margin: 0 5px;
+            font-size: 18px;
+        }
+
+        nav .social_icon i:hover {
+            color: #03ac13;
+            cursor: pointer;
+        }
+
+        #hamBurger {
+            display: none;
+        }
+
+        .button {
+            padding: 7px 10px;
+            color: #fff;
+            animation: none;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+            background-color: #03ac13;
+        }
+
+        #home {
+            width: 100%;
+            padding: 3rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .home-left {
+            height: 300px;
+            position: relative;
+        }
+
+        .home-left img {
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        .home-right {
+            width: 50%;
+        }
+
+        .home-heading {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #03ac13;
+        }
+
+        .home-para {
+            margin-bottom: 20px;
+        }
+
+
+
+        @keyframes width {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+
+        #workFlow {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .heading {
+            margin: 1rem auto;
+            text-align: left;
+            color: #03ac13;
+        }
+
+        .para {
+            margin: 1rem auto;
+        }
+
+        .num-container {
+            width: 70%;
+            margin: 1rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .num-item {
+            font-size: 1.5rem;
+            line-height: 1.4rem;
+            color: rgb(43, 126, 199);
+        }
+
+        /* Our Team */
+        #our-Team {
+            width: 80%;
+            margin: 4rem auto 1rem;
+        }
+
+        #our-Team h2 {
+            text-align: center;
+            margin: 1rem auto 4rem;
+            position: relative;
+        }
+
+        #our-Team h2::after {
+            content: '';
+            height: 4px;
+            margin: 0 auto;
+            text-align: center;
+            width: 15%;
+            background-color: #03ac13;
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            border-radius: 5px;
+            transform: translate(-50%);
+        }
+
+        .teamContainer {
+            width: 70%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .team-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0.5rem;
+        }
+
+        .team-item h5 {
+            margin-top: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .team-item span {
+            margin-top: .4rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: rgb(7, 176, 176);
+        }
+
+        .team-item img {
+            width: 80px;
+        }
+
+
+
+footer{
+margin-top:30px;
+    width: 100%;
+    background: #eaeaea;
 }
 
-body{
-    min-height: 100vh;
+footer .footer_main{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .footer_main .tag{
+    margin: 10px 0;
+
+}
+
+footer .footer_main .tag img{
+    width: 120px;
+    height:100px;
+    margin-bottom: 10px;
+    margin-top:45px;
+}
+
+footer .footer_main .tag p{
+    width: 250px;
+    line-height: 22px;
+    text-align: justify;
+}
+
+footer .footer_main .tag h1{
+    font-size: 25px;
+    margin: 25px 0;
+    color: #000;
+}
+
+footer .footer_main .tag a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+footer .footer_main .tag i{
+    margin-right: 10px;
+}
+
+footer .footer_main .tag .social_link i{
+    margin: 0 5px;
+}
+
+footer .end{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f1f1f1;
+    padding: 15px;
+    color: #000;
 }
 
-.about-section{
-    background: url(pic.jpg) no-repeat left;
-    background-size: 55%;
-    background-color: #fdfdfd;
-    overflow: hidden;
-    padding: 100px 0;
+footer .end span{
+    /* color: #089da1; */
+    color: #03ac13;
+    margin-left: 10px;
 }
 
-.inner-container{
-    width: 55%;
-    float: right;
-    background-color: #fdfdfd;
-    padding: 150px;
-}
+    </style>
+</head>
 
-.inner-container h1{
-    margin-bottom: 30px;
-    font-size: 30px;
-    font-weight: 900;
-}
-
-.text{
-    font-size: 13px;
-    color: #545454;
-    line-height: 30px;
-    text-align: justify;
-    margin-bottom: 40px;
-}
-
-.skills{
-    display: flex;
-    justify-content: space-between;
-    font-weight: 700;
-    font-size: 13px;
-}
-
-@media screen and (max-width:1200px){
-    .inner-container{
-        padding: 80px;
-    }
-}
-
-@media screen and (max-width:1000px){
-    .about-section{
-        background-size: 100%;
-        padding: 100px 40px;
-    }
-    .inner-container{
-        width: 100%;
-    }
-}
-
-@media screen and (max-width:600px){
-    .about-section{
-        padding: 0;
-    }
-    .inner-container{
-        padding: 60px;
-    }
-}
-</style>
 <body>
-<div class="about-section">
+    <!--================== Header Section Starts from Here ==================-->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/">
+                    <img src="https://www.nicepng.com/png/detail/23-232432_book-icon-transparent-blue-book-icon.png">
+                </a>
+            </div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/recommend">Recommend</a></li>
+                <li><a href="/aboutus">About-us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--================== Header Section Ends Here -->
 
-        <div class="inner-container">
-            <h1>About Us</h1>
-            <p class="text">
-               To create a successful book recommendation system, it is also important to understand user behavior and preferences. This can be achieved through user surveys, data analysis, and other techniques that gather information about readers' interests, reading habits, and preferred genres.
 
-Finally, a good book recommendation system should also take into account factors such as book popularity, author reputation, and reader reviews. By considering these factors, the system can provide more nuanced and personalized recommendations that are tailored to each individual user.
-            </p>
-            <div class="skills">
-                <span>Web Design</span>
-                <span>Photoshop & Illustrator</span>
-                <span>Coding</span>
+    <!--================== Home Section Starts from Here ==================-->
+    <section id="home">
+        <div class="home-left">
+            <img src="https://classroomclipart.com/image/static7/preview2/one-open-book-with-plant-design-elements-55799.jpg" alt="" style="padding-top: 60px;">
+        </div>
+        <div class="home-right">
+            <h2 class="home-heading"> Discover your next read</h2>
+            <p class="home-para">To create a successful book recommendation system, it is also important to understand user behavior and preferences. This can be achieved through user surveys, data analysis, and other techniques that gather information about readers' interests, reading habits, and preferred genres.
+
+                Finally, a good book recommendation system should also take into account factors such as book popularity, author reputation, and reader reviews. By considering these factors, the system can provide more nuanced and personalized recommendations that are tailored to each individual user.</p>
+
+        </div>
+    </section>
+    <!--================== Home Section Ends Here -->
+
+    <!--================== Workflow Section Starts from Here ==================-->
+    <section id="workFlow">
+        <h2 class="heading"> Grow Up Your Workflow Speed. </h2>
+        <p class="para">Discover your next favorite book. Powered by cutting-edge technology and a passion for literature, <br>we provide personalized recommendations tailored to your unique tastes. Join us on a journey of literary exploration <br>and find the perfect reads that speak to you</p>
+
+    </section>
+    <!--================== Workflow Section Ends Here -->
+
+    <!--================== Our Team Section Starts from Here ==================-->
+    <section id="our-Team">
+        <h2>Our Team</h2>
+        <div class="teamContainer">
+            <div class="team-item">
+                <img src="https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/3_avatar-512.png" alt="">
+                <h5 class="member-name">Akash Nair</h5>
+            </div>
+            <div class="team-item">
+                <img src="https://cdn0.iconfinder.com/data/icons/kids-avatars/512/50_Kids_Icons-22-512.png" alt="">
+                <h5 class="member-name">Adwitiya Bhattacharya</h5>
+            </div>
+            <div class="team-item">
+                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRgyWmFPWT9tpH-Q0hOH6ygbTip-re9Y_-tmjQlAKMzFgKI3TJn" alt="">
+                <h5 class="member-name">Aditya Ranjan Pradhan</h5>
             </div>
         </div>
+
+    <!--================== Footer Starts from Here ==================-->
+<footer>
+    <div class="footer_main">
+
+        <div class="logo">
+            <img style="height: 100px; width: 200px; margin-top: 10px" src="https://www.nicepng.com/png/detail/23-232432_book-icon-transparent-blue-book-icon.png">
+        </div>
+
+        <div class="tag">
+            <h1>Quick Link</h1>
+            <a href="#">Home</a>
+            <a href="#">Recommended</a>
+            <a href="#">About</a>
+        </div>
+
+        <div class="tag">
+            <h1>Contact Info</h1>
+            <a href="mailto:20051124@kiit.ac.in"><i class="fa-solid fa-envelope"></i>Adwitiya Bhattacharya</a>
+            <a href="mailto:20051314@kiit.ac.in"><i class="fa-solid fa-envelope"></i>Akash Nair</a>
+            <a href="mailto:20051620@kiit.ac.in"><i class="fa-solid fa-envelope"></i>Aditya Ranjan Pradhan</a>
+
+        </div>
+
+        <div class="tag">
+            <h1>Follow Us</h1>
+            <div class="social_link">
+                <p>Instagram</p>
+                <p>Facebook</p>
+                <p>Linkedin</p>
+            </div>
+
+        </div>
+
     </div>
-</body>
+
+    <p class="end">Designed By<span><i class="fa-solid fa-face-grin"></i> Adwitiya, Akash, Aditiya </span></p>
+
+</footer>
+
+    <!--================== Footer Ends Here -->
+
 </html>
