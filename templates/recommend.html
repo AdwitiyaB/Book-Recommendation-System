@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Recommender System</title>
+    <!-- Latest compiled and minified CSS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- Include Poppins font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+
+<style>
+    body {
+        font-family: 'Poppins'; /* Apply Poppins font to the entire document */
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins';
+    }
+
+    section {
+        width: 100%;
+        height: 20vh;
+        background-size: cover;
+        background-position: center;
+    }
+
+    section nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        box-shadow: 0 0 10px #03ac13;
+        background: #fff;
+        position: fixed;
+        left: 0;
+        z-index: 100;
+    }
+
+    section nav .logo img {
+        width: 100px;
+        cursor: pointer;
+        margin: 8px 0;
+    }
+
+    section nav ul {
+        list-style: none;
+    }
+
+    section nav li {
+        display: inline-block;
+        padding: 0 10px;
+    }
+
+    section nav li a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    section nav li a:hover {
+        color: #03ac13;
+    }
+
+    section nav .social_icon i {
+        margin: 0 5px;
+        font-size: 18px;
+    }
+
+    section nav .social_icon i:hover {
+        color: #03ac13;
+        cursor: pointer;
+    }
+
+    .container h1 {
+        font-weight: bold;
+        color: #03ac13;
+        margin-bottom: 30px;
+    }
+
+    .card-body {
+        height: 300px;
+        width: 200px;
+        box-shadow: 0 0 8px #03ac13;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .input-card {
+        height: 300%;
+        width: 350%;
+        box-shadow: 0 0 8px #03ac13;
+        padding: 10px;
+        margin: 0;
+    }
+
+    .card-body img {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .card-body p {
+        font-weight: bold;
+
+    }
+
+    .card-body h4 {
+        font-weight: bold;
+        font-size: 10px;
+        color: #03ac13;
+    }
+
+
+    footer {
+        margin-top: 30px;
+        width: 100%;
+        background: #eaeaea;
+    }
+
+    footer .footer_main {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    footer .footer_main .tag {
+        margin: 10px 0;
+    }
+
+    footer .footer_main .tag img {
+        width: 100px;
+        margin-bottom: 10px;
+    }
+
+    footer .footer_main .tag p {
+        width: 250px;
+        line-height: 22px;
+        text-align: justify;
+    }
+
+    footer .footer_main .tag h1 {
+        font-size: 25px;
+        margin: 25px 0;
+        color: #000;
+    }
+
+    footer .footer_main .tag a {
+        display: block;
+        color: black;
+        text-decoration: none;
+        margin: 10px 0;
+    }
+
+    footer .footer_main .tag i {
+        margin-right: 10px;
+    }
+
+    footer .footer_main .tag .social_link i {
+        margin: 0 5px;
+    }
+
+    footer .end {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        color: #000;
+    }
+    .progress {
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    border-radius: 5px;
+    height: 100%;
+    transition: width 0.3s ease-in-out;
+    /* Define the gradient */
+    background: linear-gradient(to right, yellow,#03ac13,#00a1ff); /* Adjust the colors as needed */
+}
+
+    footer .end span {
+        color: #03ac13;
+        margin-left: 10px;
+    }
+</style>
+
+<body>
+<section>
+
+    <nav>
+
+        <div class="logo">
+            <a href="/">
+                <img src="https://www.nicepng.com/png/detail/23-232432_book-icon-transparent-blue-book-icon.png">
+            </a>
+        </div>
+
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/recommend">Recommend</a></li>
+            <li><a href="#Featured">contact</a></li>
+        </ul>
+    </nav>
+
+</section>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <center><h1 class="text-white" style="font-size:50px">Unlock worlds, one page at a time: Dive into our recommended reads!</h1></center>
+            <form action="/recommend_books" method="post">
+                <center><input id="search_input" name="user_input" type="text" style="width: 50%" class="form-control" autocomplete="off"><br></center>
+                <center><input type="submit" class="btn btn-lg btn-warning"></center>
+            </form>
+            <div id="suggestion-list"></div>
+        </div>
+    </div>
+
+    {% if user_input %}
+    <div class="col-md-3" style="margin-top:50px; margin-left: 100px">
+        <div class="card">
+            <div class="card-body text-center input-card" style="border-radius: 15px">
+
+                <h1 class="text-center">Book Selected</h1>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img class="card-img-top" style="width: 50%" src="{{ user_input_image_url }}">
+                    </div>
+                    <div class="col-md-8">
+                        <h2 class="text-white">{{ user_input }}</h2>
+                        <h4 class="text-white">Author: {{ user_input_author }}</h4>
+                        <h4 class="text-white">Ratings: {{ user_input_ratings }} / 10</h4>
+                        {% if user_input_ratings %}
+                        <center><div class="progress" style="margin: 30px; width: 50%">
+                            <div class="progress-bar" role="progressbar" style="width: {{ user_input_ratings*10 }}%; background-color: #03ac13"
+                                 aria-valuenow="{{ user_input_ratings }}" aria-valuemin="0" aria-valuemax="10">
+                            </div>
+                        </div></center>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+
+{% if data %}
+<h1 class="text-center">Recommended Books</h1>
+<div class="container">
+    <div class="row">
+        {% for i in data %}
+        <div class="col-md-3" style="margin-top:50px">
+            <div class="card">
+                <div class="card-body text-center" style="border-radius: 15px">
+                    <img class="card-img-top" src="{{i[2]}}">
+                    <p class="text-white">{{i[0]}}</p>
+                    <h4 class="text-white">{{i[1]}}</h4>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+
+<footer>
+    <div class="footer_main">
+
+        <div class="logo">
+            <img style="height: 100px; width: 200px; margin-top: 10px" src="https://www.nicepng.com/png/detail/23-232432_book-icon-transparent-blue-book-icon.png">
+        </div>
+
+        <div class="tag">
+            <h1>Quick Link</h1>
+            <a href="#">Home</a>
+            <a href="#">Recommended</a>
+            <a href="#">About</a>
+        </div>
+
+        <div class="tag">
+            <h1>Contact Info</h1>
+            <a href="#"><i class="fa-solid fa-envelope"></i>20051124@kiit.ac.in</a>
+            <a href="#"><i class="fa-solid fa-envelope"></i>20051314@kiit.ac.in</a>
+            <a href="#"><i class="fa-solid fa-envelope"></i>20051620@kiit.ac.in</a>
+
+        </div>
+
+        <div class="tag">
+            <h1>Follow Us</h1>
+            <div class="social_link">
+                <p>Instagram</p>
+                <p>Facebook</p>
+                <p>Linkedin</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <p class="end">Designed By<span><i class="fa-solid fa-face-grin"></i> Adwitiya, Akash, Aditiya </span></p>
+
+</footer>
+
+<!-- Script to handle autocomplete functionality -->
+<script>
+    $(document).ready(function () {
+        $("#search_input").autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: "/autocomplete",  // Endpoint to handle autocomplete requests
+                    type: "POST",
+                    dataType: "json",
+                    data: {
+                        term: request.term  // User input
+                    },
+                    success: function (data) {
+                        response(data);  // Populate autocomplete suggestions
+                    }
+                });
+            },
+            minLength: 1,  // Minimum number of characters before autocomplete starts
+            appendTo: "#suggestion-list",  // Append suggestions to this element
+            position: {my: "center top", at: "center bottom"}, // Position suggestions below the input field
+            // Custom rendering for autocomplete items
+            focus: function (event, ui) {
+                event.preventDefault();
+                $("#search_input").val(ui.item.title);
+            },
+            select: function (event, ui) {
+                event.preventDefault();
+                $("#search_input").val(ui.item.title);
+            }
+        }).autocomplete("instance")._renderItem = function (ul, item) {
+            // Custom rendering for each autocomplete item
+            return $("<li>")
+                .append("<div><img src='" + item.image_url + "' style='width: 50px; height: 50px;'> " + item.title + "</div>")
+                .appendTo(ul);
+        };
+
+        // Set input value to selected book on click
+        $("#suggestion-list").on("click", "li", function () {
+            var title = $(this).text().trim();
+            var image_url = $(this).find("img").attr("src");
+            $("#selected-book-title").text(title);
+            $("#selected-book-image").attr("src", image_url);
+            $("#search_input").val(title);
+        });
+
+    });
+</script>
+
+</body>
+</html>

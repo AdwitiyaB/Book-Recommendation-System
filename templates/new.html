@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+    background-image: url(image/bg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+section nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 10px orange;
+    background: #fff;
+    position: fixed;
+    left: 0;
+    z-index: 100;
+}
+
+section nav .logo img{
+    width: 100px;
+    cursor: pointer;
+    margin: 8px 0;
+}
+
+section nav ul{
+    list-style: none;
+}
+
+section nav li{
+    display: inline-block;
+    padding: 0 10px;
+}
+
+section nav li a{
+    text-decoration: none;
+    color: #000;
+}
+
+section nav li a:hover{
+    color: orange;
+}
+
+section nav .social_icon i{
+    margin: 0 5px;
+    font-size: 18px;
+}
+
+section nav .social_icon i:hover{
+    color: orange;
+    cursor: pointer;
+}
+
+section .main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 10%;
+}
+
+section .main h1{
+    position: relative;
+    font-size: 55px;
+    top: 80px;
+    left: 25px;
+}
+
+section .main h1 span{
+    color: orange;
+}
+
+section .main p{
+    width: 650px;
+    text-align: justify;
+    line-height: 22px;
+    position: relative;
+    top: 125px;
+    left: 25px;
+}
+
+section .main .main_tag .main_btn{
+    background: orange;
+    padding: 10px 20px;
+    position: relative;
+    top: 200px;
+    left: 25px;
+    color: #fff;
+    text-decoration: none;
+}
+
+section .main .main_img img{
+    width: 200px;
+
+    position: relative;
+    top: 90px;
+    left: 20px;
+}
+
+
+
+/*services*/
+
+.services{
+    width: 100%;
+    height: auto;
+    margin: 35px 0;
+}
+
+.services .services_box{
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.services .services_box .services_card{
+    text-align: center;
+    width: 310px;
+    height: auto;
+    box-shadow: 0 0 8px orange;
+    padding: 15px 10px;
+}
+
+.services .services_box .services_card i{
+    color: orange;
+    font-size: 45px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.services .services_box .services_card h3{
+    margin-bottom: 10px;
+}
+</style>
+<body>
+
+    <section>
+
+        <nav>
+
+            <div class="logo">
+                <img src="https://www.nicepng.com/png/detail/23-232432_book-icon-transparent-blue-book-icon.png">
+            </div>
+
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Featured">Recommended</a></li>
+                <li><a href="#About">About-us</a></li>
+                <li><a href="#Featured">contact</a></li>
+            </ul>
+
+            <div class="social_icon">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+
+        </nav>
+
+        <div class="main">
+
+            <div class="main_tag">
+                <h1>WELCOME TO<br><span>BOOK RECOMMENDATION <br> SYSTEM</span></h1>
+
+                <p>
+                   Here we save the time for user who is intrested in reading books with different theme.
+                  we provide 50 best books with best review and once user search that book we also recommend them which typpe of book they must read.
+                </p>
+                <a href="#" class="main_btn">Learn More</a>
+
+            </div>
+
+            <div class="main_img">
+                <img src="https://media.istockphoto.com/id/1256910594/vector/set-of-paper-books-with-colorful-hard-cover-isolated-on-white-background-vector-flat.jpg?s=612x612&w=0&k=20&c=5IaTPgzhnHO3FMvSavQdB5ytf6MQRbZOJOBJ7BFT6mI=">
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <!--Services-->
+
+    <div class="services">
+
+        <div class="services_box">
+
+            <div class="services_card">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h3>Fast Delivery</h3>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                </p>
+            </div>
+
+            <div class="services_card">
+                <i class="fa-solid fa-headset"></i>
+                <h3>24 x 7 Services</h3>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                </p>
+            </div>
+
+            <div class="services_card">
+                <i class="fa-solid fa-tag"></i>
+                <h3>Best Deal</h3>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                </p>
+            </div>
+
+            <div class="services_card">
+                <i class="fa-solid fa-lock"></i>
+                <h3>Secure Payment</h3>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

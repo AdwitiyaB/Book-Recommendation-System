@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+section{
+    width: 100%;
+    height: 20vh;
+    background-image: url(image/bg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+section nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 10px orange;
+    background: #fff;
+    position: fixed;
+    left: 0;
+    z-index: 100;
+}
+
+section nav .logo img{
+    width: 100px;
+    cursor: pointer;
+    margin: 8px 0;
+}
+
+section nav ul{
+    list-style: none;
+}
+
+section nav li{
+    display: inline-block;
+    padding: 0 10px;
+}
+
+section nav li a{
+    text-decoration: none;
+    color: #000;
+}
+
+section nav li a:hover{
+    color: orange;
+}
+
+section nav .social_icon i{
+    margin: 0 5px;
+    font-size: 18px;
+}
+
+section nav .social_icon i:hover{
+    color: orange;
+    cursor: pointer;
+}
+
+.container h1{
+font-weight:bold;
+color:orange;
+margin-bottom:30px;
+}
+
+.card-body{
+height: 300px;
+  width: 200px;
+  box-shadow: 0 0 8px orange;
+  padding: 10px;
+  margin: 0
+}
+.card-body img{
+margin-left:30px;
+margin-bottom:20px;
+margin-top:20px;
+}
+.card-body p{
+font-weight:bold;
+
+}
+.card-body h4{
+font-weight:bold;
+font-size:10px;
+color:orange;
+}
+
+
+footer{
+margin-top:30px;
+    width: 100%;
+    background: #eaeaea;
+}
+
+footer .footer_main{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .footer_main .tag{
+    margin: 10px 0;
+}
+
+footer .footer_main .tag img{
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+footer .footer_main .tag p{
+    width: 250px;
+    line-height: 22px;
+    text-align: justify;
+}
+
+footer .footer_main .tag h1{
+    font-size: 25px;
+    margin: 25px 0;
+    color: #000;
+}
+
+footer .footer_main .tag a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+footer .footer_main .tag i{
+    margin-right: 10px;
+}
+
+footer .footer_main .tag .social_link i{
+    margin: 0 5px;
+}
+
+footer .end{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    color: #000;
+}
+
+footer .end span{
+    color: orange;
+    margin-left: 10px;
+}
+
+</style>
+<body>
+<section>
+
+        <nav>
+
+            <div class="logo">
+                <a href="/">
+                <img src="https://www.nicepng.com/png/detail/23-232432_book-icon-transparent-blue-book-icon.png">
+                    </a>
+            </div>
+
+            <ul>
+                <li><a href="/">Home</a></li>
+            <li><a href="/recommend">Recommend</a></li>
+                <li><a href="/aboutus">About-us</a></li>
+                <li><a href="/contactus">contact</a></li>
+                 <li><a href="/login">Login</a></li>
+            </ul>
+
+            <div class="social_icon">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+
+        </nav>
+    </section>
+<div class="container">
+    <div class=" row justify-content-center">
+        <div class="col-sm-6 mt-4">
+            <h2>Login Form</h2>
+            <form action="/login" method="POST">
+                <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                </div>
+                <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password">
+                </div>
+
+                <button type="submit" class="btn btn-dark">Submit</button>
+                <a href="/register" class="btn btn-primary">Register</a>
+            </form>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
